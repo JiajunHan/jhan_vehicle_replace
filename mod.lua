@@ -1,4 +1,4 @@
-local cache = require "cache"
+local cache = require "vehicle_replace_cache"
 
 local function populateVehicles(fileName, data)
   local md = data.metadata
