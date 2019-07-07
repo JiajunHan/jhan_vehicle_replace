@@ -1,5 +1,5 @@
 require "tableutil"
-local cache = require "cache"
+local cache = require "vehicle_replace_cache"
 
 local utils = {}
 
