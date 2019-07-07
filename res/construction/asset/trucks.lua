@@ -39,7 +39,7 @@ function data()
       }
       -- end fake result
 
-      -- If "No action" is selected, do nothing.
+      -- If "No action" is selected or there is no selection change, do nothing.
       if input.vehicleNameIndex == 0 or input.vehicleNameIndex == cache.truckPreviousIndex then
         return result
       end
