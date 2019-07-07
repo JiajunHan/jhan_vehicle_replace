@@ -194,9 +194,9 @@ function utils.constructionFunctionFatory(type)
         description = ""
       },
       autoRemoveable = true,
-      categories = {"tools"},
+      categories = {"replace"},
       skipCollision = false,
-      order = 1,
+      order = 2100 + #type,
       params = vehicleInfo.params,
       updateFn = utils.replaceVehicleFunctionFactory(type, vehicleInfo)
     }
