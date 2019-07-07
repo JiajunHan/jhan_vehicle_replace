@@ -1,4 +1,3 @@
-local log = require "log"
 local cache = require "cache"
 
 local function populateVehicles(fileName, data)
@@ -20,13 +19,10 @@ local function populateVehicles(fileName, data)
 
   if carrier == "TRAM" then
     targetTable = cache.trams
-    log.openFile("trams", "w")
   elseif carrier == "ROAD" and capType == "PASSENGERS" then
     targetTable = cache.buses
-    log.openFile("buses", "w")
   elseif carrier == "ROAD" then
     targetTable = cache.trucks
-    log.openFile("trucks", "w")
   else
     assert(false, "something wrong :(")
   end
@@ -35,22 +31,7 @@ local function populateVehicles(fileName, data)
     file = fileName,
     duration = md.availability
   }
-  log.table(targetTable)
-  log.str("-----call stack-------")
-  local info
-  local i = 1
 
-  repeat
-    local info = debug.getinfo(i, "S")
-    log.table(info)
-    i = i + 1
-  until info == nil
-
-  return data
-end
-
-local function logAllModel(fileName, data)
-  log.table(data)
   return data
 end
 
