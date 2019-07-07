@@ -1,0 +1,3 @@
+local utils = require "vehicle_replace_utils"
+
+data = utils.constructionFunctionFatory("bus")
