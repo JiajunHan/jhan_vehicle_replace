@@ -1,1 +1,3 @@
-/home/hanjiajun/.steam/steam/steamapps/common/Transport Fever/mods/jhan_vehicle_replace_1/res/construction/asset/trucks.lua
+local utils = require "vehicle_replace_utils"
+
+data = utils.constructionFunctionFatory("truck")
