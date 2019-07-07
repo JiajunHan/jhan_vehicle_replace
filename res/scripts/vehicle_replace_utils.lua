@@ -1,5 +1,4 @@
 require "tableutil"
-local log = require "log"
 local cache = require "cache"
 
 local utils = {}
@@ -107,8 +106,6 @@ function utils.processVehicleToDurationPairs(type)
     durationVehiclesPairList = durationVehiclesPairList
   }
 
-  log.table(result, "params and durationVehiclesPairList")
-
   return result
 end
 
@@ -189,7 +186,6 @@ end
 -- Create a function for a construction definition. Input types are "bus", "tram" or "truck"
 function utils.constructionFunctionFatory(type)
   return function()
-    log.openFile("trucks.con", "w")
     local vehicleInfo = utils.processVehicleToDurationPairs(type)
     return {
       type = "ASSET_DEFAULT",
